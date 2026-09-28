@@ -1,0 +1,168 @@
+/* kubackigreg.com
+   System fonts only: no Google Fonts, so no visitor IP goes to a third party (GDPR). */
+
+:root {
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --ink: #1b1a18;
+  --muted: #5e5b56;
+  --line: #e4dfd7;
+  --accent: #9a3b1c;
+  --max: 44rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141312;
+    --surface: #1c1b19;
+    --ink: #edebe7;
+    --muted: #a6a39d;
+    --line: #2f2d2a;
+    --accent: #e3845f;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+}
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.2) blur(8px);
+  border-bottom: 1px solid var(--line);
+  z-index: 5;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.wordmark {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+nav a:hover { color: var(--ink); }
+
+/* Sections */
+main section { padding-top: 3.25rem; padding-bottom: 0.5rem; }
+.hero { padding-top: 4.5rem; }
+
+h1 {
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.55rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.85rem;
+  font-weight: 650;
+}
+h3 {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+  font-weight: 650;
+}
+p { margin: 0 0 0.9rem; }
+
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.muted { color: var(--muted); }
+
+/* Work cards */
+.cards { display: grid; gap: 1rem; margin-top: 1.25rem; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.3rem 0.6rem;
+}
+.source { font-size: 0.92rem; }
+
+/* Speaking list */
+.list { list-style: none; padding: 0; margin: 1rem 0 0; }
+.list li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.list li:last-child { border-bottom: 1px solid var(--line); }
+.list .source { display: block; margin-top: 0.35rem; }
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.site-footer p { margin: 0; }

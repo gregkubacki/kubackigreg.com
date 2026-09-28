@@ -1,0 +1,5 @@
+# Local tooling, never published
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store
