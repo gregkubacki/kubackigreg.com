@@ -84,9 +84,12 @@ a:focus-visible {
 .wordmark {
   color: var(--ink);
   text-decoration: none;
-  font-weight: 650;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
 }
+.wordmark span { color: var(--accent); }
 nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 nav a {
   color: var(--muted);
@@ -137,6 +140,86 @@ p { margin: 0 0 0.9rem; }
   margin-bottom: 0.4rem;
 }
 .muted { color: var(--muted); }
+
+/* Portrait and images */
+.portrait {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  margin: 0 0 1.5rem;
+}
+.banner { margin: 0.25rem 0 1.25rem; }
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Proof points under the intro */
+.proof {
+  list-style: none;
+  padding: 0;
+  margin: 1.6rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.proof li {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+/* Experience timeline */
+.timeline { list-style: none; padding: 0; margin: 1rem 0 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+}
+.timeline li:last-child { border-bottom: 1px solid var(--line); }
+.timeline .when {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.1rem;
+}
+@media (max-width: 34rem) {
+  .timeline li { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
+/* Testimonials */
+.quote {
+  margin: 1.25rem 0 0;
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  border-left: 3px solid var(--accent);
+}
+.quote blockquote { margin: 0; }
+.quote blockquote p {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  margin: 0 0 0.5rem;
+}
+.quote figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.quote figcaption strong { color: var(--ink); font-weight: 600; }
+.quote-small { margin-top: 0.75rem; }
+.quote-small blockquote p { font-size: 1rem; }
+
+/* Credentials */
+.creds { margin: 1.1rem 0 0; padding-left: 1.1rem; }
+.creds li { margin-bottom: 0.3rem; }
 
 /* Work cards */
 .cards { display: grid; gap: 1rem; margin-top: 1.25rem; }
