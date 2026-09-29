@@ -116,10 +116,10 @@ h1 { font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.875rem); font-weight: 600; line-
 .coords { font-size: 11px; color: var(--muted); }
 
 .hero-visual { display: flex; flex-direction: column; gap: 14px; }
-.orbit { position: relative; width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 640 / 560; }
+.orbit { position: relative; width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 640 / 600; }
 .orbit-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .orbit-photo {
-  position: absolute; left: 17.03%; top: 26.61%; width: 65.94%; height: auto;
+  position: absolute; left: 20.31%; top: 1.33%; width: 59.38%; height: auto;
   -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
 }
@@ -134,10 +134,10 @@ h1 { font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.875rem); font-weight: 600; line-
 .wp[aria-pressed="true"] { color: var(--accent); }
 .wp[aria-pressed="true"] .dot { width: 12px; height: 12px; border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 4px rgba(242, 165, 65, 0.25); }
 .wp .lbl { position: absolute; top: 50%; transform: translateY(-50%); font-size: 10px; white-space: nowrap; }
-.wp-uk { left: 4.69%; top: 44.91%; }
-.wp-mt { left: 9.38%; top: 59.82%; }
-.wp-cz { left: 90.63%; top: 59.82%; }
-.wp-pl { left: 95.31%; top: 44.91%; }
+.wp-uk { left: 4.69%; top: 65.25%; }
+.wp-mt { left: 9.38%; top: 79.17%; }
+.wp-cz { left: 90.63%; top: 79.17%; }
+.wp-pl { left: 95.31%; top: 65.25%; }
 .wp-uk .lbl { left: calc(50% + 12px); }
 .wp-pl .lbl { right: calc(50% + 12px); }
 .wp-mt .lbl, .wp-cz .lbl { top: calc(50% + 12px); left: 50%; transform: translateX(-50%); }
