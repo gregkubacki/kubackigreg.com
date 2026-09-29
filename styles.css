@@ -209,6 +209,9 @@ h1 { font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.875rem); font-weight: 600; line-
 .list-card li { display: flex; flex-direction: column; gap: 2px; padding: 12px 0; border-top: 1px solid var(--line); font-weight: 500; }
 .list-card li:last-child { padding-bottom: 0; }
 .list-card li .muted { font-weight: 400; font-size: 14px; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.shots img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+.shots figcaption { font-size: 10px; line-height: 1.5; margin-top: 8px; }
 
 /* Contact */
 .contact { position: relative; padding: 36px 24px; display: flex; flex-direction: column; gap: 22px; }
